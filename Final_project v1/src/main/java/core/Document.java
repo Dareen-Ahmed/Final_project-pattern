@@ -1,37 +1,52 @@
 package core;
 
-public abstract class Document implements Cloneable{
-	protected String name;
-    protected String description;
-    protected String imageUrl;
+public class Document implements Cloneable{
+    protected String Documents_id;
+    protected String Documents_name;
+    protected String Documents_description;
+    protected String Documents_image;
+
+    public Document(String Documents_id, String Documents_name, String Documents_description, String Documents_image) {
+        this.Documents_id = Documents_id;
+        this.Documents_name = Documents_name;
+        this.Documents_description = Documents_description;
+        this.Documents_image = Documents_image;
+    }
 
     public Document clone() throws CloneNotSupportedException {
         return (Document) super.clone();
     }
 
     // Getter and setter methods
-    public String getName() {
-        return name;
+    public String getDocuments_id() {
+        return Documents_id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDocuments_id(String Documents_id) {
+        this.Documents_id = Documents_id;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDocuments_name() {
+        return Documents_name;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDocuments_name(String Documents_name) {
+        this.Documents_name = Documents_name;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getDocuments_description() {
+        return Documents_description;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setDocuments_description(String Documents_description) {
+        this.Documents_description = Documents_description;
+    }
+
+    public String getDocuments_image() {
+        return Documents_image;
+    }
+
+    public void setDocuments_image(String Documents_image) {
+        this.Documents_image = Documents_image;
     }
 }
-
